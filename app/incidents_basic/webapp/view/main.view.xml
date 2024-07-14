@@ -1,0 +1,47 @@
+<mvc:View
+    controllerName="ns.incidentsbasic.controller.main"
+    xmlns="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+    height="100%"
+>
+    <m:Page
+        id="_IDGenPage1"
+        showHeader="false"
+        enableScrolling="false"
+        class="sapUiContentPadding"
+    >
+        <m:content>
+            <Table
+                id="_IDGenTable1"
+                rows="{/Incidents}"
+                selectionMode="MultiToggle"
+                paste="onPaste"
+                ariaLabelledBy="title"
+            >
+                <columns>
+                    <Column width="11rem">
+                        <m:Label text="customer_ID" />
+                        <template>
+                            <m:Text
+                                text="{customer_ID}"
+                                wrapping="false"
+                            />
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="title" />
+                        <template>
+                            <m:Text
+                                text="{title}"
+                                wrapping="false"
+                            />
+                        </template>
+                    </Column>
+                </columns>
+            </Table>
+        </m:content>
+    </m:Page>
+</mvc:View>
